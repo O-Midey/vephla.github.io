@@ -1,0 +1,591 @@
+/************** default styles **********************/
+
+@import url("http://fonts.cdnfonts.com/css/futura-lt");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --purple: rgba(125, 38, 205, 1);
+  --deep-purple: rgb(65, 0, 126);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  padding-bottom: 5px;
+}
+button {
+  cursor: pointer;
+}
+
+input {
+  font-family: "Poppins";
+}
+
+textarea {
+  padding: 5px;
+  resize: none;
+  font-family: "Poppins";
+  width: 100%;
+  border-color: #939393;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/********************** Navbar ***********************/
+
+.logo {
+  font-family: "Futura LT", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  font-family: "Futura LT", sans-serif;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+.purple-text {
+  color: var(--purple) !important;
+}
+
+nav {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex; /** for safari **/
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0.5px 2px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  max-width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav--middle ul {
+  list-style-type: none;
+}
+
+.nav--middle ul li {
+  display: inline-block;
+  padding: 0 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav--middle ul li a:hover {
+  color: var(--purple);
+  border-bottom: 5px solid var(--purple);
+  transition: all 0.1s ease;
+}
+
+.sign-up {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+  background-color: white;
+  color: var(--purple);
+}
+
+nav .sign-up {
+  padding: 5px 25px;
+  border: 1px solid var(--purple);
+  border-radius: 7px;
+}
+
+nav .sign-up a {
+  color: var(--purple);
+}
+
+.sign-up:hover {
+  color: white;
+  background-color: var(--purple);
+  transition: all 0.3s ease-in-out;
+}
+
+/***************** sign-in page styles ******************/
+
+.form-content {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  display: -webkit-flex; /** for safari **/
+  align-items: stretch;
+  justify-content: center;
+  width: 80vw;
+  min-height: 70vh;
+  margin-top: 30px;
+  gap: 0;
+}
+
+.form-container p {
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #525252;
+}
+
+.left-col {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 40%;
+  background-image: url("http://yevandy.com/wp-content/uploads/2019/05/david-olubaji-1224456-unsplash.jpg");
+  background-size: cover;
+  flex-shrink: 2;
+}
+
+.right-col {
+  background-color: white;
+  width: 50%;
+  padding: 10px 50px;
+  border: 1px solid #dedede;
+  border-radius: 0px 24px 24px 0px;
+}
+
+.right-col > h4 {
+  padding: 15px;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.right-col input {
+  padding: 10px 15px 10px 45px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.right-col input:focus {
+  outline: none;
+  border: 1px solid #dedede;
+}
+
+input::placeholder {
+  font-family: "Poppins";
+}
+
+.right-col input[type="email"] {
+  width: 100%;
+  background-image: url("envelope.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 15px 13px;
+}
+
+.right-col input[type="password"] {
+  width: 100%;
+  background-image: url("padlock.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 17px 15px;
+  position: relative;
+}
+
+.password-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.eyes {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 20%;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.remember-me .purple-text {
+  font-size: 12px;
+}
+
+form button.sign-up {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  background-color: var(--purple);
+  color: white;
+}
+
+form button.sign-up:hover {
+  background-color: var(--deep-purple);
+  transition: 0.2s;
+}
+
+.sign-in-options > h4 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.mulish {
+  font-family: "mulish", sans-serif !important;
+  font-size: 20px;
+  color: black !important;
+}
+
+.log-in-options-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.log-in-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 45%;
+  border: 1px solid var(--purple);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.log-in-options:hover {
+  opacity: 0.6;
+  transition: 0.5s ease;
+}
+
+/************* contact us page styles ***********************/
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.contact-us--left-col {
+  width: 40%;
+  background-image: url("african-american-man-customer-support-operator-with-hands-free-headset-working-office 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.rounded-div {
+  background-color: rgba(168, 110, 222, 1);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-col input[type="text"] {
+  width: 100%;
+  background-image: url("user.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 15px 13px;
+}
+
+.right-col input[type="text"]:last-of-type {
+  width: 100%;
+  background-image: url("note.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 20px 15px;
+}
+
+textarea {
+  padding: 5px;
+  resize: none;
+  font-family: "Poppins";
+  width: 100%;
+  border-color: #939393;
+}
+
+textarea::placeholder {
+  font-family: "poppins";
+}
+
+form button.send-message {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  background-color: var(--purple);
+  color: white;
+  font-family: "Poppins";
+  margin-bottom: 30px;
+}
+
+form button.send-message:hover {
+  background-color: var(--deep-purple);
+  transition: 0.2s;
+}
+
+form button.send-message:focus,
+form button.send-message:active {
+  outline: none;
+  border: 1px solid #dedede;
+}
+
+/************** Sign up page styles ************/
+
+.sign-up-left-col {
+  width: 50%;
+  background-image: url("cut-in-a-moment-rotRaep7gpY-unsplash.png");
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 40%;
+  background-size: cover;
+  flex-shrink: 2;
+  background-position: 8%;
+}
+
+.terms-and-condition {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 12px;
+}
+
+.right-col input[type="tel"] {
+  width: 100%;
+  background-image: url("phone-call.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 15px 15px;
+}
+
+/**************** contact us page styles ****************/
+
+.sub-div:first-of-type {
+  text-align: center;
+  width: 60%;
+  margin-top: 20px;
+}
+
+.sub-div {
+  text-align: center;
+  width: 60%;
+  margin-top: 60px;
+}
+
+.contact-card-div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+  max-width: 325px;
+  background-color: white;
+  border: 1px solid #f7f7f7;
+  border-radius: 10px;
+  padding: 20px 65px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+  min-width: 250px;
+}
+
+.purple-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #e5d4f5;
+  margin-bottom: 20px;
+}
+
+.contact-card > h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contact-card > p {
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.contact-card > h5 {
+  line-height: 24px;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.social-icon-div {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+}
+
+.social-icon:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+/******************** footer styles ********************/
+
+footer {
+  background: #190829;
+  padding: 30px 40px;
+}
+
+.first-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.white-border-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.round-white-border {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.footer-links h3 {
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links li {
+  list-style-type: none;
+}
+
+.second-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  color: white;
+  align-items: center;
+}
+
+.footer-links.extra-links {
+  display: flex;
+  gap: 5vw;
+}
+
+/********************************** media queries **********************************/
+
+@media (max-width: 830px) {
+  .eyes {
+    right: 22%;
+  }
+}
+
+@media (max-width: 820px) {
+  .eyes {
+    right: 22%;
+  }
+
+  .left-col,
+  .sign-up-left-col {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  nav .nav--middle {
+    display: none;
+  }
+
+  .right-col {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .call-to-action {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .log-in-options-div {
+    display: block;
+    margin: auto;
+  }
+
+  .log-in-options {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
